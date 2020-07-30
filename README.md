@@ -1,2 +1,2 @@
 # String-Plan
-Let's have fun together.
+Find us at https://string-plan.github.io/StringPlan

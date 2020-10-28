@@ -3,7 +3,8 @@ title: Mini Program Learning Resources
 date: 2020-07-27 18:00
 description: First week to learn how to develop a mini program
 categories:
- - tutorial
+ - 后端
+ - 前端
 ---
 
 ## HighLight

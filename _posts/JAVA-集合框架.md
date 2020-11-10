@@ -82,7 +82,7 @@ categories:
 - HashMap由数组+链表结构变成数组+链表+红黑树结构
 - 优化高位运算的Hash算法，h^(h>>>16)（将高16位也用于Hash计算，减少碰撞概率）
 - 由于容量为2的倍数，所以根据index=hash&(cap-1)，扩容后，元素要么在本身位置，要么在原位置再移动2次幂的位置（比如原来在2现在变成4），且链表顺序不变。
-- 在扩容的时候，摒弃jdk1.7的头插法，采用尾插法，避免成环问题（成环问题看https://zhuanlan.zhihu.com/p/21673805）。
+- 在扩容的时候，摒弃jdk1.7的头插法，采用尾插法，避免成环问题（成环问题看[参考.1]）。
 - ConcurrentHashMap的优化
   - 取消segments字段，直接将table数组的元素作为锁，实现对每行数据进行加锁（锁的粒度更细，并发度更高）
 
@@ -109,6 +109,13 @@ categories:
 
   - 并发场景下，HashMap会出现什么问题？（这里jdk1.7和jdk1.8存在的问题不同）
 
-    
+
+# 五、参考
+
+- [1. Java 8系列之重新认识HashMap](https://zhuanlan.zhihu.com/p/21673805)
+
+- [2.jdk1.8的HashMap和ConcurrentHashMap](https://my.oschina.net/pingpangkuangmo/blog/817973)
+
+- [3.搞懂 Java ArrayList 源码](https://juejin.im/post/6844903582194466824#heading-12)
 
   
